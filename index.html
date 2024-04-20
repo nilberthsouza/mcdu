@@ -5,9 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadora</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #808080; /* Background cinza */
+
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #808080; /* Background cinza */
+      margin: 0;
+      padding: 0;
+  }
+  #keyboard {
+      width: 400px;
+      margin: 50px auto;
+      background-color: #ccc; /* Cor de fundo cinza */
+      padding: 20px;
+      border-radius: 10px;
+  }
+  .row {
+      margin-bottom: 10px;
+  }
+  .letter {
+      width: 60px;
+      height: 40px;
+      font-size: 18px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #000; /* Fundo preto */
+      color: #fff; /* Letras brancas */
+      cursor: pointer;
+  }
+   cinza */
         margin: 0;
         padding: 0;
     }
@@ -71,5 +97,67 @@
 </div>
 
 
+  <div id="keyboard">
+      <div class="row">
+          <button class="letter" onclick="appendLetter('A')">A</button>
+          <button class="letter" onclick="appendLetter('B')">B</button>
+          <button class="letter" onclick="appendLetter('C')">C</button>
+          <button class="letter" onclick="appendLetter('D')">D</button>
+          <button class="letter" onclick="appendLetter('E')">E</button>
+      </div>
+      <div class="row">
+          <button class="letter" onclick="appendLetter('F')">F</button>
+          <button class="letter" onclick="appendLetter('G')">G</button>
+          <button class="letter" onclick="appendLetter('H')">H</button>
+          <button class="letter" onclick="appendLetter('I')">I</button>
+          <button class="letter" onclick="appendLetter('J')">J</button>
+      </div>
+      <div class="row">
+          <button class="letter" onclick="appendLetter('K')">K</button>
+          <button class="letter" onclick="appendLetter('L')">L</button>
+          <button class="letter" onclick="appendLetter('M')">M</button>
+          <button class="letter" onclick="appendLetter('N')">N</button>
+          <button class="letter" onclick="appendLetter('O')">O</button>
+      </div>
+      <div class="row">
+          <button class="letter" onclick="appendLetter('P')">P</button>
+          <button class="letter" onclick="appendLetter('Q')">Q</button>
+          <button class="letter" onclick="appendLetter('R')">R</button>
+          <button class="letter" onclick="appendLetter('S')">S</button>
+          <button class="letter" onclick="appendLetter('T')">T</button>
+      </div>
+      <div class="row">
+          <button class="letter" onclick="appendLetter('U')">U</button>
+          <button class="letter" onclick="appendLetter('V')">V</button>
+          <button class="letter" onclick="appendLetter('W')">W</button>
+          <button class="letter" onclick="appendLetter('X')">X</button>
+          <button class="letter" onclick="appendLetter('Y')">Y</button>
+      </div>
+    <div class="row">
+        <button class="letter" onclick="appendLetter('Z')">Z</button>
+        <button class="letter" onclick="appendLetter('/')">/</button>
+        <button class="letter" onclick="">SP</button>
+        <button class="letter" onclick="">OVFY</button>
+        <button class="clear" onclick="clearResult()">CLR</button>
+    </div>
+  </div>
+
+  <input type="text" id="result" disabled>
+
+  <script>
+      function appendLetter(letter) {
+          document.getElementById('result').value += letter;
+      }
+
+    function clearResult() {
+        currentInput = '';
+        result.value = '';
+    }
+  </script>
+
+  </body>
+  </html>
+
+  
 </body>
 </html>
